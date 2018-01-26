@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, MenuController } from 'ionic-angular';
 import { Pagina2Page } from "../index.paginas";
 
 @IonicPage()
@@ -11,11 +11,15 @@ export class PrincipalPage {
 
   pagina2:any = Pagina2Page;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
   }
 
 
   navegarPagina(){
     this.navCtrl.push(Pagina2Page);
+  }
+
+  mostrarMenu(){
+    this.menuCtrl.toggle();
   }
 }
